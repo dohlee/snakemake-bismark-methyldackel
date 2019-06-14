@@ -1,0 +1,22 @@
+language: python
+
+python:
+    - 3.6
+
+before_install:
+    - wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
+    - chmod +x miniconda.sh
+    - ./miniconda.sh -b
+    - export PATH=/home/travis/miniconda3/bin:$PATH
+    - conda update --yes conda
+
+install:
+    - travis_wait 30 conda env create -f environment.yaml
+
+before_script:
+    - source activate bismark-methyldackel
+    - snakemake -v
+    - wget https://gist.githubusercontent.com/dohlee/d61aa27ecb00e2bbdb48fda00360e3c1/raw/test.sh -qO test.sh
+    - chmod 755 test.sh
+
+script: travis_wait 40 ./test.sh
