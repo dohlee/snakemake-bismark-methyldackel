@@ -1,0 +1,11 @@
+name: bismark-methyldackel
+channels:
+    - conda-forge
+    - bioconda
+    - defaults
+dependencies:
+    - snakemake
+    - bismark
+    - methyldackel
+    - trim-galore
+    - sambamba
