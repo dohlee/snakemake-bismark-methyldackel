@@ -6,19 +6,17 @@ reference:
     prefix: 'reference/hg38_chr20'
     dir: 'reference'
     fasta: 'reference/hg38_chr20.fasta'
+
 threads:
     trim_galore_se: 8
     trim_galore_pe: 8
     bismark_genome_preparation: 8
-    bismark_se: 12 
-    bismark_pe: 12 
-    sambamba_sort_se: 6
-    sambamba_sort_pe: 6
-    sambamba_index_se: 6
-    sambamba_index_pe: 6
-    methyldackel_extract_se: 4
-    methyldackel_extract_pe: 4
-sambamba_sort_se:
+    bismark: 12 
+    sambamba_sort: 6
+    sambamba_index: 6
+    methyldackel_extract: 4
+
+sambamba_sort:
     extra: ''
     memory_limit: False
     tmpdir: False
@@ -26,14 +24,7 @@ sambamba_sort_se:
     compression_level: False
     uncompressed_chunks: False
     show_progress: False
-sambamba_sort_pe:
-    extra: ''
-    memory_limit: False
-    tmpdir: False
-    sort_by_name: False
-    compression_level: False
-    uncompressed_chunks: False
-    show_progress: False
+
 bismark_genome_preparation:
     extra: ''
     verbose: False
@@ -44,6 +35,7 @@ bismark_genome_preparation:
     genomic_composition: False
     slam: False
     large_index: False
+
 trim_galore_se:
     extra: ''
     quality: 20
@@ -77,6 +69,7 @@ trim_galore_se:
     retain_unpaired: False
     length_1: False
     length_2: False
+
 trim_galore_pe:
     extra: ''
     quality: 20
@@ -110,7 +103,8 @@ trim_galore_pe:
     retain_unpaired: False
     length_1: False
     length_2: False
-bismark_se:
+
+bismark:
     extra: ''
     single_end: False
     fastq: True
@@ -148,45 +142,8 @@ bismark_se:
     ambig_bam: False
     nucleotide_coverage: False
     icpc: False
-bismark_pe:
-    extra: ''
-    single_end: False
-    fastq: True
-    fasta: False
-    skip: False
-    upto: False
-    phred33_quals: True
-    phred64_quals: False
-    path_to_bowtie2: False
-    path_to_hisat2: False
-    N: 0
-    L: False
-    ignore_quals: False
-    minins: 0
-    maxins: 500
-    local: False
-    non_directional: False
-    pbat: False
-    sam_no_hd: False
-    rg_tag: False
-    rg_id: False
-    rg_sample: False
-    unmapped: False
-    ambiguous: False
-    temp_dir: False
-    non_bs_mm: False
-    gzip: False
-    sam: False
-    cram: False
-    cram_ref: False
-    samtools_path: False
-    prefix: False
-    basename: False
-    old_flag: False
-    ambig_bam: False
-    nucleotide_coverage: False
-    icpc: False
-methyldackel_extract_se:
+
+methyldackel_extract:
     extra: ''
     q: 10
     p: 5
@@ -221,35 +178,3 @@ methyldackel_extract_se:
     min_depth: 10
     mapping_quality_threshold: 10
     sequencing_quality_threshold: 5
-methyldackel_extract_pe:
-    extra: ''
-    q: 10
-    p: 5
-    D: 2000
-    d: 1
-    r: False
-    l: False
-    keepStrand: False
-    chunkSize: 1000000
-    mergeContext: False
-    opref: False
-    keepDupes: False
-    keepSingleton: False
-    keepDiscordant: False
-    ignoreFlags: False
-    requireFlags: False
-    noCpG: False
-    CHG: False
-    CHH: False
-    minOppositeDepth: False
-    maxVariantFrac: False
-    methylKit: False
-    cytosine_report: False
-    OT: False
-    OB: False
-    CTOT: False
-    CTOB: False
-    nOT: False
-    nOB: False
-    nCTOT: False
-    nCTOB: False

@@ -7,7 +7,7 @@ rule trim_galore_se:
     input:
         DATA_DIR / '{sample}.fastq.gz'
     output:
-        RESULT_DIR / '01_trim-galore' / 'se' / '{sample}.trimmed.fastq.gz'
+        RESULT_DIR / '01_trim-galore' / '{sample}.trimmed.fastq.gz'
     params:
         extra = TGS['extra'],
         # Trim low-quality ends from reads in addition to adapter removal. For RRBS samples,
@@ -190,8 +190,8 @@ rule trim_galore_pe:
         DATA_DIR / '{sample}.read1.fastq.gz',
         DATA_DIR / '{sample}.read2.fastq.gz',
     output:
-        RESULT_DIR / '01_trim-galore' / 'pe' / '{sample}.read1.trimmed.fastq.gz',
-        RESULT_DIR / '01_trim-galore' / 'pe' / '{sample}.read2.trimmed.fastq.gz',
+        RESULT_DIR / '01_trim-galore' / '{sample}.read1.trimmed.fastq.gz',
+        RESULT_DIR / '01_trim-galore' / '{sample}.read2.trimmed.fastq.gz',
     params:
         extra = TGP['extra'],
         # Trim low-quality ends from reads in addition to adapter removal. For RRBS samples,
