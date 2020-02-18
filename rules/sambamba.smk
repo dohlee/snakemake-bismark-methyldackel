@@ -2,7 +2,7 @@ from pathlib import Path
 RESULT_DIR = Path(config['result_dir'])
 
 SSS = config['sambamba_sort']
-rule sambamba_sort_se:
+rule sambamba_sort:
     input:
         RESULT_DIR / '02_bismark' / '{sample}.bismark.bam'
     output:
@@ -40,7 +40,7 @@ rule sambamba_sort_se:
         # Default: False
         show_progress = SSS['show_progress'],
     threads: config['threads']['sambamba_sort']
-    log: 'logs/sambamba_sort/{sample}.log'
+    # log: 'logs/sambamba_sort/{sample}.log'
     benchmark: 'benchmarks/sambamba_sort/{sample}.benchmark'
     wrapper:
         'http://dohlee-bio.info:9193/sambamba/sort'

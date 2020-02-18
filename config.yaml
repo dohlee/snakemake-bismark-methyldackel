@@ -19,7 +19,7 @@ threads:
 sambamba_sort:
     extra: ''
     memory_limit: False
-    tmpdir: False
+    tmpdir: '.'
     sort_by_name: False
     compression_level: False
     uncompressed_chunks: False
