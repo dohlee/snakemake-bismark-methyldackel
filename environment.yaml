@@ -9,3 +9,4 @@ dependencies:
     - methyldackel
     - trim-galore
     - sambamba
+    - ldc=1.11.0
