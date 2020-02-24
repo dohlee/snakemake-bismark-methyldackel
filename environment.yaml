@@ -4,9 +4,9 @@ channels:
     - bioconda
     - defaults
 dependencies:
-    - snakemake=0.6.8
+    - snakemake
     - bismark
     - methyldackel
     - trim-galore
-    - sambamba
+    - sambamba=0.6.8
     - ldc=1.11.0
