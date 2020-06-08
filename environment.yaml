@@ -6,7 +6,7 @@ channels:
 dependencies:
     - snakemake
     - bismark
-    - methyldackel
+    - methyldackel=0.4.0
     - trim-galore
     - sambamba=0.6.8
     - ldc=1.11.0
