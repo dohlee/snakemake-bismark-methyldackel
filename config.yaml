@@ -152,7 +152,7 @@ methyldackel_extract:
     l: False
     keepStrand: False
     chunkSize: 1000000
-    mergeContext: False
+    mergeContext: True
     keepDupes: False
     keepSingleton: False
     keepDiscordant: False
@@ -173,6 +173,3 @@ methyldackel_extract:
     nOB: False
     nCTOT: False
     nCTOB: False
-    min_depth: 10
-    mapping_quality_threshold: 10
-    sequencing_quality_threshold: 5
