@@ -4,6 +4,9 @@ channels:
     - bioconda
     - defaults
 dependencies:
+    - python=3.6
+    - pandas
+
     - bismark
     - methyldackel=0.4.0
     - trim-galore
