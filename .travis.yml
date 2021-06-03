@@ -8,10 +8,10 @@ before_install:
     - chmod +x miniconda.sh
     - ./miniconda.sh -b
     - export PATH=/home/travis/miniconda3/bin:$PATH
-    - conda update --yes conda
+    - conda install mamba -n base -c conda-forge -y
 
 install:
-    - travis_wait 30 conda env create -f environment.yaml
+    - travis_wait 30 mamba env create -f environment.yaml
 
 before_script:
     - source activate bismark-methyldackel

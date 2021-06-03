@@ -7,7 +7,7 @@ dependencies:
     - python=3.6
     - pandas
 
-    - bismark
+    - bismark=0.22.3
     - methyldackel=0.4.0
     - trim-galore
     - sambamba=0.6.8
