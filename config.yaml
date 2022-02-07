@@ -1,6 +1,6 @@
-manifest: '/data/project/dohoon/workbench/snakemake-bismark-methyldackel/manifest.csv'
-data_dir: '/data/project/dohoon/workbench/snakemake-bismark-methyldackel/data'
-result_dir: '/data/project/dohoon/workbench/snakemake-bismark-methyldackel/result'
+manifest: 'manifest.csv'
+data_dir: 'data'
+result_dir: 'result'
 reference:
     name: 'hg38'
     prefix: '/data/project/dohoon/reference/hg38/hg38'
